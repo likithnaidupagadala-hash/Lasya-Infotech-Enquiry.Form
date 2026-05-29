@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasya Infotech - Enquiry Form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Lasya_enquiry_form.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-box">
+
+        <!-- Logo -->
+        <img src="logo.jpg" alt="Lasya Infotech Logo" class="logo">
+
+        <h2>Lasya Infotech</h2>
+        <p class="tagline">Student Enquiry Form</p>
+
+        <div class="contact-info">
+            <span>Kompally, Hyderabad</span>
+            <span class="divider">|</span>
+            <span>73306 66881/82</span>
+            <span class="divider">|</span>
+            <span>ov@lasyainfotech.com</span>
+        </div>
+
+        <p class="subtitle">One Stop Solution for your Career Planning and Development</p>
+
+        <form id="enquiryForm">
+
+            <!-- FULL NAME -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('name')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- PARENT / SPOUSE NAME -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="text" id="parentName" placeholder="Parent / Spouse Name" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('parentName')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('email')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- MOBILE 1 -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="tel" id="phone1" placeholder="Mobile Number 1" maxlength="10" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('phone1')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- MOBILE 2 -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <input type="tel" id="phone2" placeholder="Mobile Number 2 (Optional)" maxlength="10">
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('phone2')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- QUALIFICATION -->
+            <select id="qualification" required>
+                <option value="">Select Qualification *</option>
+                <option>B.Tech</option>
+                <option>B.E</option>
+                <option>B.Sc</option>
+                <option>BCA</option>
+                <option>M.Tech</option>
+                <option>MCA</option>
+                <option>M.Sc</option>
+                <option>MBA</option>
+                <option>Diploma</option>
+                <option>Intermediate</option>
+                <option>Secondary Education</option>
+                <option>Primary Education</option>
+                <option>ITI</option>
+                <option>LLB</option>
+                <option>BBA</option>
+                <option>PHD</option>
+            </select>
+
+            <!-- SPECIALIZATION -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="text" id="specialization" placeholder="Specialization / Branch" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('specialization')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- COLLEGE -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="text" id="college" placeholder="College Name" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('college')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- PASSOUT YEAR -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <span class="star">*</span>
+                    <input type="number" id="passout" placeholder="Pass-out Year" min="2000" max="2030" required>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('passout')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <input type="number" id="experience" placeholder="Years of Experience (0 if Fresher)" min="0">
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('experience')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- GAP -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <input type="number" id="gap" placeholder="Years of Gap After Education (0 if None)" min="0">
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('gap')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <!-- TRAINING MODE -->
+            <select id="mode" required>
+                <option value="">Training Mode *</option>
+                <option>Online</option>
+                <option>Offline</option>
+                <option>Hybrid</option>
+            </select>
+
+            <!-- COURSES (checkbox multi-select) -->
+            <div class="multi-select-box">
+                <div class="dropdown" id="courseDropdown">
+                    <button type="button" class="dropbtn" onclick="toggleDropdown()">
+                        <span id="dropbtnText">Select Courses <span class="required-star">*</span></span>
+                        <span class="material-icons drop-arrow">expand_more</span>
+                    </button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <label><input type="checkbox" name="course" value="C Programming"> C Programming</label>
+                        <label><input type="checkbox" name="course" value="C++"> C++</label>
+                        <label><input type="checkbox" name="course" value="Data Structures and Algorithms"> Data Structures and Algorithms</label>
+                        <label><input type="checkbox" name="course" value="Core Java"> Core Java</label>
+                        <label><input type="checkbox" name="course" value="Advanced Java"> Advanced Java</label>
+                        <label><input type="checkbox" name="course" value=".Net"> .Net</label>
+                        <label><input type="checkbox" name="course" value="Python"> Python</label>
+                        <label><input type="checkbox" name="course" value="Full Stack Java"> Full Stack Java</label>
+                        <label><input type="checkbox" name="course" value="Full Stack Python"> Full Stack Python</label>
+                        <label><input type="checkbox" name="course" value="Full Stack .Net"> Full Stack .Net</label>
+                        <label><input type="checkbox" name="course" value="Web Technologies (UI)"> Web Technologies (UI)</label>
+                        <label><input type="checkbox" name="course" value="React JS"> React JS</label>
+                        <label><input type="checkbox" name="course" value="AngularJS"> AngularJS</label>
+                        <label><input type="checkbox" name="course" value="Node JS"> Node JS</label>
+                        <label><input type="checkbox" name="course" value="Django"> Django</label>
+                        <label><input type="checkbox" name="course" value="Spring Boot"> Spring Boot</label>
+                        <label><input type="checkbox" name="course" value="Data Science"> Data Science</label>
+                        <label><input type="checkbox" name="course" value="Machine Learning"> Machine Learning</label>
+                        <label><input type="checkbox" name="course" value="Deep Learning"> Deep Learning</label>
+                        <label><input type="checkbox" name="course" value="SQL"> SQL</label>
+                        <label><input type="checkbox" name="course" value="Oracle SQL"> Oracle SQL</label>
+                        <label><input type="checkbox" name="course" value="PL/SQL"> PL/SQL</label>
+                        <label><input type="checkbox" name="course" value="Power BI"> Power BI</label>
+                        <label><input type="checkbox" name="course" value="Tableau"> Tableau</label>
+                        <label><input type="checkbox" name="course" value="AWS Cloud"> AWS Cloud</label>
+                        <label><input type="checkbox" name="course" value="DevOps"> DevOps</label>
+                        <label><input type="checkbox" name="course" value="Selenium Testing"> Selenium Testing</label>
+                        <label><input type="checkbox" name="course" value="Manual Testing"> Manual Testing</label>
+                        <label><input type="checkbox" name="course" value="Digital Marketing"> Digital Marketing</label>
+                        <label><input type="checkbox" name="course" value="UI/UX Design"> UI/UX Design</label>
+                        <label><input type="checkbox" name="course" value="Photoshop"> Photoshop</label>
+                        <label><input type="checkbox" name="course" value="MS Office"> MS Office</label>
+                        <label><input type="checkbox" name="course" value="Advance Excel"> Advance Excel</label>
+                        <label><input type="checkbox" name="course" value="Tally Professional"> Tally Professional</label>
+                        <label><input type="checkbox" name="course" value="GST Using Tally"> GST Using Tally</label>
+                        <label><input type="checkbox" name="course" value="SAP FICO"> SAP FICO</label>
+                        <label><input type="checkbox" name="course" value="SAP HR"> SAP HR</label>
+                        <label><input type="checkbox" name="course" value="SAP MM"> SAP MM</label>
+                        <label><input type="checkbox" name="course" value="SAP SD"> SAP SD</label>
+                        <label><input type="checkbox" name="course" value="IELTS"> IELTS</label>
+                        <label><input type="checkbox" name="course" value="PTE"> PTE</label>
+                        <label><input type="checkbox" name="course" value="GRE"> GRE</label>
+                        <label><input type="checkbox" name="course" value="TOEFL"> TOEFL</label>
+                        <label><input type="checkbox" name="course" value="Spoken English"> Spoken English</label>
+                        <label><input type="checkbox" name="course" value="German A1"> German A1</label>
+                        <label><input type="checkbox" name="course" value="German A2"> German A2</label>
+                        <label><input type="checkbox" name="course" value="French A1"> French A1</label>
+                        <label><input type="checkbox" name="course" value="French A2"> French A2</label>
+                        <label><input type="checkbox" name="course" value="Auto CAD"> Auto CAD</label>
+                        <label><input type="checkbox" name="course" value="SolidWorks"> SolidWorks</label>
+                        <label><input type="checkbox" name="course" value="GATE"> GATE</label>
+                        <label><input type="checkbox" name="course" value="CAT"> CAT</label>
+                        <label><input type="checkbox" name="course" value="EAMCET"> EAMCET</label>
+                        <label><input type="checkbox" name="course" value="JEE"> JEE</label>
+                        <label><input type="checkbox" name="course" value="NEET"> NEET</label>
+                        <label><input type="checkbox" name="course" value="Internship"> Internship</label>
+                        <label><input type="checkbox" name="course" value="Major Project"> Major Project</label>
+                        <label><input type="checkbox" name="course" value="Placements"> Placements</label>
+                        <label><input type="checkbox" name="course" value="Soft Skills"> Soft Skills</label>
+                        <label><input type="checkbox" name="course" value="CRT"> CRT</label>
+                        <label><input type="checkbox" name="course" value="B.Tech Tuitions"> B.Tech Tuitions</label>
+                        <label><input type="checkbox" name="course" value="Inter Tuitions"> Inter Tuitions</label>
+                        <label><input type="checkbox" name="course" value="10th Tuitions"> 10th Tuitions</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIMING -->
+            <select id="timing" required>
+                <option value="">Preferred Timing *</option>
+                <option>7:00 AM - 8:00 AM</option>
+                <option>8:00 AM - 9:00 AM</option>
+                <option>9:00 AM - 10:00 AM</option>
+                <option>10:00 AM - 11:00 AM</option>
+                <option>11:00 AM - 12:00 PM</option>
+                <option>12:00 PM - 1:00 PM</option>
+                <option>2:00 PM - 3:00 PM</option>
+                <option>3:00 PM - 4:00 PM</option>
+                <option>4:00 PM - 5:00 PM</option>
+                <option>5:00 PM - 6:00 PM</option>
+                <option>6:00 PM - 7:00 PM</option>
+            </select>
+
+            <!-- ENQUIRY SOURCE -->
+            <select id="source" required>
+                <option value="">Enquiry Source *</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>LinkedIn</option>
+                <option>YouTube</option>
+                <option>Google Search</option>
+                <option>Website</option>
+                <option>WhatsApp</option>
+                <option>Referral</option>
+                <option>Friends</option>
+                <option>College</option>
+                <option>Seminar</option>
+                <option>Advertisement</option>
+                <option>Walk-In</option>
+                <option>Other</option>
+            </select>
+
+            <!-- COMMENTS -->
+            <div class="voice-box">
+                <div class="input-box">
+                    <textarea id="message" placeholder="Comments (Optional)" rows="3"></textarea>
+                </div>
+                <button type="button" class="google-mic-btn" onclick="startVoice('message')" title="Speak">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Enquiry</button>
+
+            <p id="successMsg"></p>
+
+            <div class="form-note">
+                <p><span class="required-star">*</span> Indicates mandatory fields.</p>
+                <p>⚠️ Please do not share passwords, OTPs, or confidential information through this form.</p>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="Lasya_enquiry_form.js"></script>
+</body>
+</html>
